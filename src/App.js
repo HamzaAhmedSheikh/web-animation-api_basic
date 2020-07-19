@@ -9,7 +9,7 @@ function App() {
   const { ref, playState, getAnimation } = useWebAnimations({
     keyframes: [
       {transform: "translate(0,0)"},
-      {transform: "translate(600px, 0)"}
+      {transform: "translate(600px, 0)"},      
     ],
     timing: {
      // delay: 2000, // Start with a 500ms delay
