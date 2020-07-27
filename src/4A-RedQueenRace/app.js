@@ -86,6 +86,11 @@ export const RedQueenRace  = () => {
     //     { transform: 'translateY(0)' },
     //     { transform: 'translateY(-100%)' }   
     //   ];
+
+    const spriteFrames = [
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-100%)' }   
+      ];
       
     //   var redQueen_alice_sprite = document.getElementById('red-queen_and_alice_sprite');
       
@@ -97,6 +102,19 @@ export const RedQueenRace  = () => {
     //     playbackRate: 1,
     //     iterations: Infinity
     //   });
+
+
+    const redQueen_alice = useWebAnimations({
+        keyframes: spriteFrames,
+        timing: {
+            
+                  asing: 'steps(7, end)',
+                  direction: "reverse",
+                  uration: 600,
+                  playbackRate: 1,
+                  iterations: Infinity
+        },
+    })
       
     //   /* Alice tires so easily! 
     //     Every so many seconds, reduce their playback rate so they slow a little. 
@@ -154,7 +172,8 @@ export const RedQueenRace  = () => {
                         id="red-queen_and_alice_sprite"
                         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/sprite_running-alice-queen_small.png"
                         srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/sprite_running-alice-queen.png 2x"
-                        alt="Alice and the Red Queen running to stay in place."                        
+                        alt="Alice and the Red Queen running to stay in place." 
+                        ref={redQueen_alice.ref}                       
                     />
                 </div>
             </div>
