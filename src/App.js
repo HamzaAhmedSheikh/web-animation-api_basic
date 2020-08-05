@@ -6,8 +6,8 @@ import { RedQueenRace } from './4A-RedQueenRace/app'
 function App() {
   
   return (
-   <div>
-     <RedQueenRace />     
+   <div className='App'>
+     <RedQueenRace />
    </div>
 
     
